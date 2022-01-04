@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\ContactController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +17,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::redirect('v1/sanctum/csrf-cookie', '/sanctum/csrf-cookie');
 
-Route::group(['prefix' => 'v1'], function () {
-    Route::group(['middleware' => ['auth:sanctum']], function () {
+Route::post('/create-account', [AuthenticationController::class, 'createAccount']);
+Route::post('/signin', [AuthenticationController::class, 'signin']);
+
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::get('/profile', function(Request $request) {
+        return auth()->user();
     });
+    Route::get('/contacts', [ContactController::class, 'allForUserId']);
+    Route::delete('/contact/{id}', [ContactController::class, 'delete']);
+
+    Route::post('/delete', [ContactController::class, 'delete']);
+    Route::post('/sign-out', [AuthenticationController::class, 'logout']);
 });
