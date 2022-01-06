@@ -27,6 +27,8 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     });
     Route::get('/contacts', [ContactController::class, 'allForUserId']);
     Route::delete('/contact/{id}', [ContactController::class, 'delete']);
+    Route::put('/contact/{id}', [ContactController::class, 'update']);
+    Route::post('/contact', [ContactController::class, 'create']);
 
     Route::post('/delete', [ContactController::class, 'delete']);
     Route::post('/sign-out', [AuthenticationController::class, 'logout']);

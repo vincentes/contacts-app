@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
+
 class AuthenticationController extends Controller
 {
     public function createAccount(Request $request) {
@@ -28,12 +29,9 @@ class AuthenticationController extends Controller
 
     public function signin(Request $request)
     {
-        $attr = $request->validate([
-            'email' => 'required|string|email|',
-            'password' => 'required|string|min:6'
-        ]);
+        $credentials = $request->only('email', 'password');
 
-        if (!Auth::attempt($attr)) {
+        if (!Auth::attempt($credentials)) {
             return response()->json([ 'message' => 'Invalid credentials.', 'error' => '401' ], 401);
         }
 
