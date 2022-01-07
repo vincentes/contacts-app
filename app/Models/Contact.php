@@ -14,7 +14,9 @@ class Contact extends Model
         'address',
         'pic',
         'phone',
-        'email'
+        'email',
+        'title',
+        'user_id'
     ];
 
     public function messages() {
