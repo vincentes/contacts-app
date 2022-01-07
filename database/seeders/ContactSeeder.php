@@ -23,7 +23,7 @@ class ContactSeeder extends Seeder
             'address'         => '717 S 34th St\nMattoon, IL 61938',
             'phone'           => '(217) 499-0822',
             'email' => 'ryan@rowandtable.com',
-            'pic' => 'https://i.picsum.photos/id/605/64/64.jpg?hmac=ux88atNWfGZKI8szgZqMz7yzpmnPm7h1aesJbR_sqIk',
+            'pic' => 'profile1.jpeg',
             'user_id' => 1
         ));
         $norma = Contact::create(array(
@@ -32,7 +32,7 @@ class ContactSeeder extends Seeder
             'address'         => '637 W Kings Hwy\nSan Antonio, TX 78212',
             'phone'           => '(210) 733-3836',
             'email' => 'nwilson@macncheese.com',
-            'pic' => 'https://i.picsum.photos/id/782/64/64.jpg?hmac=ifuzkUa15_ir32GTZKSuxq3W-CSJWu1VyRtbHvD1iy0',
+            'pic' => 'profile2.jpeg',
             'user_id' => 1
         ));
         $morris = Contact::create(array(
@@ -41,7 +41,7 @@ class ContactSeeder extends Seeder
             'address'         => '228 Jennifer Ln #4\nPalatine, IL 60067',
             'phone'           => '(847) 277-0471',
             'email' => 'murphys@law.com',
-            'pic' => 'https://i.picsum.photos/id/123/64/64.jpg?hmac=wOXYR1LTxTkY9hMOEhAZFNKzSx2E4v_9fNFUYjmIEAw',
+            'pic' => 'profile3.jpeg',
             'user_id' => 1
         ));
         $morris = Contact::create(array(
@@ -50,7 +50,7 @@ class ContactSeeder extends Seeder
             'address'         => '440 Napoli Ct\nPrinceton, TX 75407',
             'phone'           => '(972) 734-2359',
             'email' => 'kyliexo@gmail.com',
-            'pic' => 'https://i.picsum.photos/id/342/64/64.jpg?hmac=-WMU4VCx2DoQ5ipjwu-bR8OkqAhef4bwnCmrIWHUY3w',
+            'pic' => 'profile4.jpeg',
             'user_id' => 1
         ));
         $ted = Contact::create(array(
@@ -59,7 +59,7 @@ class ContactSeeder extends Seeder
             'address'         => '13448 Pioneer Dr\nBonner Springs, KS 66012',
             'phone'           => '(913) 441-6570',
             'email' => 'teddy53@gmail.com',
-            'pic' => 'https://i.picsum.photos/id/824/64/64.jpg?hmac=jkV3FG5sWGqJ7ClmhT7M9uzN7NnK0i9rNh59RrW2zAM',
+            'pic' => 'profile5.jpeg',
             'user_id' => 1
         ));
         $wade = Contact::create(array(
@@ -68,7 +68,7 @@ class ContactSeeder extends Seeder
             'address'         => '110 Robin Cir\nBristol, VA 24202',
             'phone'           => '(276) 466-8944',
             'email' => 'wademacoy@cocacola.com',
-            'pic' => 'https://i.picsum.photos/id/349/64/64.jpg?hmac=6MomCcDeeekOx7OfL8pguQhUCzQt7Q41ZzsaHbio_-Y',
+            'pic' => 'profile6.jpeg',
             'user_id' => 1
 
         ));

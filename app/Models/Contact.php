@@ -8,6 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Contact extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'name',
+        'email',
+        'address',
+        'pic',
+        'phone',
+        'email',
+        'title',
+        'user_id'
+    ];
 
     public function messages() {
         return $this->hasMany(Message::class);
